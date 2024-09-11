@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongDog.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 16:17:15 by ekose             #+#    #+#             */
-/*   Updated: 2024/09/10 18:07:14 by ekose            ###   ########.fr       */
+/*   Updated: 2024/09/11 16:21:05 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ WrongDog::WrongDog(void){
 	this->brain = new Brain();
 }
 
-WrongDog::WrongDog(const WrongDog& copy) {
+WrongDog::WrongDog(const WrongDog& copy):WrongAnimal(copy) {
 	std::cout << "WrongDog copy constructor called" << std::endl;
 	this->setType(copy.getType());
 	this->brain = new Brain(*(copy.brain));

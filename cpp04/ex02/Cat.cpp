@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 15:47:06 by ekose             #+#    #+#             */
-/*   Updated: 2024/09/10 18:05:03 by ekose            ###   ########.fr       */
+/*   Updated: 2024/09/11 16:21:20 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Cat::Cat(){
 	this->brain = new Brain();
 	std::cout << "Cat constructor called" << std::endl;
 }
-Cat::Cat(const Cat& copy) {
+Cat::Cat(const Cat& copy):Animal(copy){
 	std::cout << "Cat copy constructor called" << std::endl;
 	this->setType(copy.getType());
 	this->brain = new Brain(*(copy.brain));

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 13:26:15 by ekose             #+#    #+#             */
-/*   Updated: 2024/09/11 17:17:14 by ekose            ###   ########.fr       */
+/*   Updated: 2024/09/11 16:12:05 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,10 @@ int main()
 	AMateria* tmp;
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
+	// delete tmp;
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
+	// delete tmp;
 	ICharacter* bob = new Character("bob");
 	me->use(0, *bob);
 	me->use(1, *bob);

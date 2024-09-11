@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 15:57:26 by ekose             #+#    #+#             */
-/*   Updated: 2024/09/10 18:06:45 by ekose            ###   ########.fr       */
+/*   Updated: 2024/09/11 16:20:21 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ Dog::Dog()
 	std::cout << "Dog constructor called" << std::endl;
 }
 
-Dog::Dog(const Dog& copy)
-{
+Dog::Dog(const Dog& copy):Animal(copy){
 	std::cout << "Dog copy constructor called" << std::endl;
 	this->setType(copy.getType());
     this->brain = new Brain(*(copy.brain));

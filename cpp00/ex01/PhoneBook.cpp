@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 14:13:30 by ekose             #+#    #+#             */
-/*   Updated: 2024/08/31 15:05:04 by ekose            ###   ########.fr       */
+/*   Updated: 2024/09/11 16:30:57 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void PhoneBook::ft_add(void)
 		{	
 			if(ft_check_number(str))	
 			{
-				this->persons[this->index_ % 8].ft_set_number(std::atoi(str.c_str()));
+				this->persons[this->index_ % 8].ft_set_number(atoi(str.c_str()));
 				break;
 			}
 			std::cout << RED << "Number cannot contain alphanumeric characters\033[0m\n";
@@ -106,15 +106,14 @@ void PhoneBook::ft_search()
 		std::cout << "Enter the index of the person you want to view\n->";
 		std::cin >> index;
 		if (std::cin.eof())
-			exit(0);
+			return ;
 		if (std::cin.fail()) 
 		{
             std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
             std::cout << RED << "Invalid input, please enter an integer.\033[0m" << std::endl;
 			continue;
 		}
-		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
 		if(index <= this->index_ && index < 8 && this->index_ >= 0 && index > -1)
 		{
 			std::cout << std::right << "\033[1;30mFirstname : " << this->persons[index].ft_get_name() << std::endl;

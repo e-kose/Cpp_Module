@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/10 16:15:19 by ekose             #+#    #+#             */
-/*   Updated: 2024/09/10 18:06:59 by ekose            ###   ########.fr       */
+/*   Updated: 2024/09/11 16:20:05 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ WrongCat::WrongCat(void){
 	this->brain = new Brain();
 }
 
-WrongCat::WrongCat(const WrongCat& copy) {
+WrongCat::WrongCat(const WrongCat& copy):WrongAnimal(copy) {
 	std::cout << "WrongCat copy constructor called" << std::endl;
 	this->setType(copy.getType());
 	this->brain = new Brain(*(copy.brain));

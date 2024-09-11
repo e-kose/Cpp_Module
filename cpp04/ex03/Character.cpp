@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 14:43:16 by ekose             #+#    #+#             */
-/*   Updated: 2024/09/11 17:11:29 by ekose            ###   ########.fr       */
+/*   Updated: 2024/09/11 15:36:39 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Character::Character(std::string name){
 	this->name = name;
 	for (int i = 0; i < 4; i++) {
-		this->environment[i] = nullptr; 
+		this->environment[i] = NULL; 
     }
 }
 
@@ -25,7 +25,7 @@ Character::Character(const Character& copy){
 		if (copy.environment[i])
 			this->environment[i] = copy.environment[i]->clone();
 		else
-			this->environment[i] = nullptr;
+			this->environment[i] = NULL;
 	}
 }
 
@@ -44,7 +44,7 @@ Character& Character::operator=(const Character& src)
 		if(src.environment[i])
 			this->environment[i] = src.environment[i]->clone();
 		else
-			this->environment[i] = nullptr;
+			this->environment[i] = NULL;
 	}
 	return (*this);
 }
@@ -61,13 +61,13 @@ std::string const& Character::getName(void) const{
 }
 
 void Character::equip(AMateria* m){
-	if(m == nullptr)
+	if(m == NULL)
 		return;
 	if (m->getType() == "ice" || m->getType() == "cure")
 	{
 		for (int i = 0; i < 4; i++)
 		{
-			if (this->environment[i] == nullptr){	
+			if (this->environment[i] == NULL){	
 				this->environment[i] = m;
 				break;
 			}
@@ -78,7 +78,7 @@ void Character::equip(AMateria* m){
 void Character::unequip(int idx){
 	
 	if (idx >= 0 && idx < 4)
-		this->environment[idx] = nullptr;
+		this->environment[idx] = NULL;
 }
 
 void Character::use(int idx, ICharacter& target){

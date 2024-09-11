@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 16:04:22 by ekose             #+#    #+#             */
-/*   Updated: 2024/09/11 17:30:18 by ekose            ###   ########.fr       */
+/*   Updated: 2024/09/11 16:13:40 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 MateriaSource::MateriaSource(void){
 	this->count = 0;
 	for (int i = 0; i < 4; i++)
-		this->materials[i] = nullptr;
+		this->materials[i] = NULL;
 }
 
 MateriaSource::MateriaSource(const MateriaSource& copy)
@@ -53,7 +53,7 @@ MateriaSource::~MateriaSource(void){
 void MateriaSource::learnMateria(AMateria* materia){
 	
 	if(materia && count < 4){
-		this->materials[this->count] = materia->clone();
+		this->materials[this->count] = materia;
 		this->count++;
 	}
 }

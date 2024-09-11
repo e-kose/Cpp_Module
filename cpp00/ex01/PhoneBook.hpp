@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 12:56:15 by ekose             #+#    #+#             */
-/*   Updated: 2024/08/31 15:08:24 by ekose            ###   ########.fr       */
+/*   Updated: 2024/09/11 16:30:47 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "Contact.hpp"
 # include "PhoneBook_utils.hpp"
+# include <cstdlib>
 
 class PhoneBook
 {
