@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalerConverter.hpp                                :+:      :+:    :+:   */
+/*   B.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/20 13:39:22 by ekose             #+#    #+#             */
-/*   Updated: 2025/01/21 15:01:54 by ekose            ###   ########.fr       */
+/*   Created: 2025/01/22 15:46:30 by ekose             #+#    #+#             */
+/*   Updated: 2025/01/22 16:29:59 by ekose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCALERCONVERTER_HPP
-# define SCALERCONVERTER_HPP
+#ifndef B_HPP
+#define B_HPP
+#include "Base.hpp"
 
-#include <iostream>
-#include <limits>
-#include <string>
-#include <cstdlib>
-class ScalerConverter{
-    private:
-        ScalerConverter();
-        ScalerConverter(ScalerConverter const & copy);
-        ScalerConverter & operator=(ScalerConverter const & src);
-        ~ScalerConverter();
+class B : public Base {
     public:
-        static void convert(const std::string &literal);
+        virtual ~B();
 };
 #endif
