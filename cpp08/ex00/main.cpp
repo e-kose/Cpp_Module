@@ -6,7 +6,7 @@
 /*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 16:06:43 by ekose             #+#    #+#             */
-/*   Updated: 2025/01/26 18:33:51 by ekose            ###   ########.fr       */
+/*   Updated: 2025/01/27 11:47:45 by ekose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ int main(){
 	vec.push_back(133);
 	std::queue<int> qu;
 	qu.push(0) , qu.push(311),qu.push(42),qu.push(13),qu.push(1);
-
 	try
 	{
 		std::list<int>::iterator lIt;
@@ -43,9 +42,9 @@ int main(){
 		std::cout<< "Found value: "<< *lIt << "\n";
 		
 		std::vector<int>::iterator vIt;
-		// vIt = std::find(vec.begin(),vec.end(), 1);
 		vIt = easyfind(vec,1);
 		std::cout<< "Found value: "<< *vIt << "\n";	
+
 	
 	}
 	catch(const std::exception& e)

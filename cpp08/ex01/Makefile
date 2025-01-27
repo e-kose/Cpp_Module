@@ -1,6 +1,6 @@
-NAME=easyfind
+NAME=span
 
-SRCS=main.cpp
+SRCS=main.cpp span.cpp
 CFLAGS=-Wall -Wextra -Werror -std=c++98
 
 all:$(NAME)

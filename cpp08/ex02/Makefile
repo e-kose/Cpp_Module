@@ -1,4 +1,4 @@
-NAME=easyfind
+NAME=MutanStack
 
 SRCS=main.cpp
 CFLAGS=-Wall -Wextra -Werror -std=c++98
