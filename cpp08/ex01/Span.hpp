@@ -6,7 +6,7 @@
 /*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 11:49:38 by ekose             #+#    #+#             */
-/*   Updated: 2025/01/27 16:02:18 by ekose            ###   ########.fr       */
+/*   Updated: 2025/01/28 12:39:27 by ekose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ class Span{
 		size_t longestSpan();
 		template <typename T>
 		void addBulk(T iterBeg, T iterEnd) {
-		    if (std::distance(iterBeg, iterEnd) > this->n - this->dque.size())
+		    if (std::distance(iterBeg, iterEnd) > static_cast<long>(this->n - this->dque.size()))
 		        throw Span::SizeOverFlow();
 		    this->dque.insert(this->dque.end(), iterBeg, iterEnd);
 		}

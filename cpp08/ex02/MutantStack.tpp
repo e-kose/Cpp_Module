@@ -6,7 +6,7 @@
 /*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:59:35 by ekose             #+#    #+#             */
-/*   Updated: 2025/01/27 17:58:48 by ekose            ###   ########.fr       */
+/*   Updated: 2025/01/28 13:02:12 by ekose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,6 @@ MutantStack<T>::MutantStack() {}
 
 template <typename T>
 MutantStack<T>::MutantStack(const MutantStack<T>& other) : std::stack<T>(other) {}
-
-template <typename T>
-MutantStack<T>::~MutantStack() {}
 
 template <typename T>
 MutantStack<T>& MutantStack<T>::operator=(const MutantStack<T>& other) {
@@ -60,3 +57,12 @@ void MutantStack<T>::push(const T& val){
     this->stck.insert(this->stck.begin(),val);
 }
 
+template <typename T>
+typename MutantStack<T>::iterator MutantStack<T>::begin(){
+    return this->stck.begin();
+}
+
+template <typename T>
+typename MutantStack<T>::iterator MutantStack<T>::end(){
+    return this->stck.end();
+}

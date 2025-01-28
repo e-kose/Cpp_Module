@@ -6,7 +6,7 @@
 /*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:35:10 by ekose             #+#    #+#             */
-/*   Updated: 2025/01/27 18:25:02 by ekose            ###   ########.fr       */
+/*   Updated: 2025/01/28 12:50:07 by ekose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,12 @@ class MutantStack{
 		size_t size()const;
 		T top()const;
 		void push(const T& val);
-		// class iterator{
-		// 	public:
-				
-		// }
+		typedef typename std::vector<T>::iterator iterator;
+		iterator begin();
+		iterator end();
+		typedef typename std::vector<T>::const_iterator const_iterator;
+		const_iterator begin()const;
+		const_iterator end()const;
 };
 #include "MutantStack.tpp"
 #endif

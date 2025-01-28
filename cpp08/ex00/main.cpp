@@ -6,7 +6,7 @@
 /*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/25 16:06:43 by ekose             #+#    #+#             */
-/*   Updated: 2025/01/27 11:47:45 by ekose            ###   ########.fr       */
+/*   Updated: 2025/01/28 13:10:20 by ekose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ int main(){
 		vIt = easyfind(vec,1);
 		std::cout<< "Found value: "<< *vIt << "\n";	
 
-	
 	}
 	catch(const std::exception& e)
 	{
