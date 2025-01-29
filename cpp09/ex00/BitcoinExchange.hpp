@@ -6,7 +6,7 @@
 /*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 14:27:58 by ekose             #+#    #+#             */
-/*   Updated: 2025/01/28 21:32:52 by ekose            ###   ########.fr       */
+/*   Updated: 2025/01/29 16:36:24 by ekose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 #define BITCOINEXCHANGE_HPP
 
 #include <iostream>
-#include <map>
 #include <fstream>
 #include <queue>
 #include <limits>
+#include <cstdlib>
+#include <iterator>
+
 class BitcoinExchange{
 	private:
 	    std::string fileName;

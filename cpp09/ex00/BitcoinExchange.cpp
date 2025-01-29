@@ -6,7 +6,7 @@
 /*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 14:52:14 by ekose             #+#    #+#             */
-/*   Updated: 2025/01/28 21:34:24 by ekose            ###   ########.fr       */
+/*   Updated: 2025/01/29 16:23:50 by ekose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void BitcoinExchange::parse(const std::string& sep) {
     std::deque<std::pair<std::string, std::string> > map;
     std::string line;
     size_t pos = 0;
-    std::ifstream input(sep == "," ? "data.csv" : this->fileName);
+    std::ifstream input(sep == "," ? "data.csv" : this->fileName.c_str());
     if (input.is_open()) {
         std::getline(input, line);
         while (std::getline(input, line)) {
@@ -134,9 +134,9 @@ bool BitcoinExchange::dateCheck(const std::string& date) const {
 std::deque<std::pair<std::string, std::string> >::const_iterator BitcoinExchange::returnValue(const std::deque<std::pair<std::string, std::string> >::const_iterator& inputIter)const{
 
     std::deque<std::pair<std::string, std::string> >::const_iterator iterData = this->data.begin();
-    
+    std::deque<std::pair<std::string, std::string> >::const_iterator nextIter = iterData;
     for(; iterData != this->data.end() ; iterData++){
-        if ((inputIter->first >= iterData->first && inputIter->first < std::next(iterData)->first) || std::next(iterData) == this->data.end())
+        if ((inputIter->first >= iterData->first && inputIter->first < nextIter->first) || nextIter == this->data.end())
             return iterData; 
     }
     return inputIter;

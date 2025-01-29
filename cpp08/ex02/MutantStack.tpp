@@ -6,7 +6,7 @@
 /*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 16:59:35 by ekose             #+#    #+#             */
-/*   Updated: 2025/01/28 13:02:12 by ekose            ###   ########.fr       */
+/*   Updated: 2025/01/29 11:46:50 by ekose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,15 @@ typename MutantStack<T>::iterator MutantStack<T>::begin(){
 
 template <typename T>
 typename MutantStack<T>::iterator MutantStack<T>::end(){
+    return this->stck.end();
+}
+
+template <typename T>
+typename MutantStack<T>::const_iterator MutantStack<T>::begin()const{
+    return this->stck.begin();
+}
+
+template <typename T>
+typename MutantStack<T>::const_iterator MutantStack<T>::end()const{
     return this->stck.end();
 }

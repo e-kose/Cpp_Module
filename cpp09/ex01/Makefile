@@ -1,6 +1,6 @@
-NAME=span
+NAME=RPN
 
-SRCS=main.cpp Span.cpp
+SRCS=main.cpp RPN.cpp
 CFLAGS=-Wall -Wextra -Werror -std=c++98
 
 all:$(NAME)

@@ -1,6 +1,6 @@
-NAME=span
+NAME=btc
 
-SRCS=main.cpp Span.cpp
+SRCS=main.cpp BitcoinExchange.cpp
 CFLAGS=-Wall -Wextra -Werror -std=c++98
 
 all:$(NAME)
