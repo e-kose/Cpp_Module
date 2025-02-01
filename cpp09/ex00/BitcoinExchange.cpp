@@ -6,7 +6,7 @@
 /*   By: ekose <ekose@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 14:52:14 by ekose             #+#    #+#             */
-/*   Updated: 2025/01/29 16:23:50 by ekose            ###   ########.fr       */
+/*   Updated: 2025/02/01 12:45:29 by ekose            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ BitcoinExchange& BitcoinExchange::operator=(const BitcoinExchange& src) {
 BitcoinExchange::~BitcoinExchange(){}
 
 void BitcoinExchange::parse(const std::string& sep) {
-    std::deque<std::pair<std::string, std::string> > map;
+    std::list<std::pair<std::string, std::string> > map;
     std::string line;
     size_t pos = 0;
     std::ifstream input(sep == "," ? "data.csv" : this->fileName.c_str());
@@ -68,7 +68,7 @@ void BitcoinExchange::printData() const {
         return;
     }
 
-    std::deque<std::pair<std::string, std::string> >::const_iterator iterInput = this->input.begin();
+    std::list<std::pair<std::string, std::string> >::const_iterator iterInput = this->input.begin();
 
     for (; iterInput != this->input.end(); ++iterInput) {
         if (this->dateFormatCheck(iterInput->first) && this->dateCheck(iterInput->first)) {
@@ -131,10 +131,10 @@ bool BitcoinExchange::dateCheck(const std::string& date) const {
 	return true;
 }
 
-std::deque<std::pair<std::string, std::string> >::const_iterator BitcoinExchange::returnValue(const std::deque<std::pair<std::string, std::string> >::const_iterator& inputIter)const{
+std::list<std::pair<std::string, std::string> >::const_iterator BitcoinExchange::returnValue(const std::list<std::pair<std::string, std::string> >::const_iterator& inputIter)const{
 
-    std::deque<std::pair<std::string, std::string> >::const_iterator iterData = this->data.begin();
-    std::deque<std::pair<std::string, std::string> >::const_iterator nextIter = iterData;
+    std::list<std::pair<std::string, std::string> >::const_iterator iterData = this->data.begin();
+    std::list<std::pair<std::string, std::string> >::const_iterator nextIter = iterData;
     for(; iterData != this->data.end() ; iterData++){
         if ((inputIter->first >= iterData->first && inputIter->first < nextIter->first) || nextIter == this->data.end())
             return iterData; 
